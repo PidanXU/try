@@ -29,10 +29,10 @@ def parse_course(page):
             ok = tds[5].text.strip() == u'\u5fc5\u4fee'
             if  ok:
                 course_info = {}
-                course_info['name'] = tds[2].text.strip() #得到课程名
+                course_info['name'] = tds[2].text.strip() 
                 print tds[2].text.strip()+':'
                 txt=tds[6].find('p')
-                infos =txt#得到课序号 教师序号之类的信息
+                infos =txt
                 print txt.text.encode("GBK",'ignore')
 
 def get_list(session):
